@@ -46,7 +46,7 @@ class Factory
             $claim[$key] = new $class(method_exists($this, $key)
                 ? $this->$key() : '');
         }
-        $this->claim = array_merge($this->claim, $claim);
+        $this->claim = array_merge($claim, $this->claim);
 
         return $this;
     }
